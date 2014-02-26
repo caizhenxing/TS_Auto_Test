@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./SeleniumUseCase.xsl"?>
+<SUITE name="致友微博 演示测试用例 By Kiven">
+	<SETTINGS browser='Chrome' application_url='http://172.16.3.9/weibo/login'></SETTINGS>
+
+	<!--一个TEST为一个测试用例-->
+	<TEST name="在百度中查询test" timeout='1'>
+		<STEPS>
+
+			<STEP index="1" type="Type.Input" name="在百度查询输入框，输入test">
+				<XPATH>//input[@id='kw']</XPATH>
+				<VALUE>test</VALUE>
+			</STEP>
+
+			<STEP index="2" type="Type.Click" name="单击百度一下按钮，执行查询">
+				<XPATH>//input[@id='su']</XPATH>
+			</STEP>
+
+			<STEP index='3' type='Type.CaptureScreenshot' name="测试截图函数">
+				<VALUE>截图测试XML</VALUE>
+			</STEP>
+
+		</STEPS>
+	</TEST>
+
+	<TEST name="致友登录测试" timeout='1'>
+		<STEPS>
+
+			<STEP index="1" type="Type.Input" name="在email框中输入email(kiven@kk.com)" verify="能正常输入">
+				<XPATH>//input[@id='email']</XPATH>
+				<VALUE>kiven@kk.com</VALUE>
+			</STEP>
+
+			<STEP index="2" type="Type.Input" name="在密码框中输入密码(1)" verify="能正常输入">
+				<XPATH>//input[@id='password']</XPATH>
+				<VALUE>1</VALUE>
+			</STEP>
+
+			<STEP index="3" type="Type.Click" name="点击登录按钮" verify="登录成功">
+				<XPATH>//button[@class='login-submit']</XPATH>
+			</STEP>
+
+			<STEP index="4" type="Type.Redirect" name="进入会议管理" verify="成功跳转">
+				<VALUE>http://172.16.3.9/meeting/</VALUE>
+			</STEP>
+
+			<STEP index='5' type='Type.CaptureScreenshot' name="截图查看登录情况">
+				<VALUE>截图查看登录情况</VALUE>
+			</STEP>
+
+		</STEPS>
+	</TEST>
+</SUITE> 

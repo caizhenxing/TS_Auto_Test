@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 该XML文件存储该所有页面元素以及元素对应的操作类型 -->
+<Targets>
+	<xpath name="邮箱文本框" type="Type.Input">//input[@id='email']</xpath>
+	<xpath name="密码文本框" type="Type.Input">//input[@id='password']</xpath>
+	<xpath name="登录按钮" type="Type.Click">//button[@class='login-submit']</xpath>
+	<xpath name="忘记密码链接" type="Type.Click">//input[@class='forget-password']</xpath>
+	<xpath name="保持登录复选框" type="Type.Click">//input[@id='remember-login']</xpath>
+	<xpath name="截图" type="Type.CaptureScreenshot"></xpath>
+	<xpath name="进入会议管理" type="Type.Click">//a[@href='/meeting']</xpath>
+</Targets>

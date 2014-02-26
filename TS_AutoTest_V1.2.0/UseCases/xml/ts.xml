@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./SeleniumUseCase.xsl"?>
+
+<SUITE name="致友微博 测试用例 By Kiven">
+  <SETTINGS browser="Chrome" application_url="http://weibo.kedacom.com/weibo/login" timeout="1"/>
+  <TEST name="致友登录">
+    <STEPS>
+      <STEP index="1" type="Type.Input" name="输入邮箱" verify="输入成功">
+        <XPATH>//input[@id='email']</XPATH>
+        <VALUE>kiven@kk.com</VALUE>
+      </STEP>
+      <STEP index="2" type="Type.Input" name="输入密码" verify="输入成功">
+        <XPATH>//input[@id='password']</XPATH>
+        <VALUE>1</VALUE>
+      </STEP>
+      <STEP index="3" type="Type.Click" name="点击登录" verify="进入致友首页">
+        <XPATH>//button[@class='login-submit']</XPATH>
+        <VALUE></VALUE>
+      </STEP>
+      <STEP index="4" type="Type.Input" name="输入微博内容" verify="成功输入">
+        <XPATH>//textarea[@id='publish-editor']</XPATH>
+        <VALUE>自动化测试</VALUE>
+      </STEP>
+      <STEP index="5" type="Type.Click" name="点击发布按钮" verify="成功发布">
+        <XPATH>//a[@id='pb-submit']</XPATH>
+        <VALUE></VALUE>
+      </STEP>
+    </STEPS>
+  </TEST>
+</SUITE>
